@@ -1,0 +1,427 @@
+/* =============================================
+   resume_style.css — 양준혁 이력서
+   디자인: 다크 테마 + 청록 포인트
+   ============================================= */
+
+/* ── 0. CSS 변수 (토큰) ── */
+:root {
+  --bg:          #0f1117;
+  --surface:     #1a1d27;
+  --surface-2:   #22263a;
+  --accent:      #3ecfcf;
+  --accent-dim:  #1f7f7f;
+  --text:        #e8eaf0;
+  --text-muted:  #7e8299;
+  --border:      #2e3148;
+  --danger:      #ff6b6b;
+
+  --font-display: 'Courier New', Courier, monospace;
+  --font-body:    'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+
+  --radius:  10px;
+  --radius-lg: 18px;
+  --shadow:  0 4px 24px rgba(0,0,0,0.4);
+  --transition: 0.25s ease;
+}
+
+/* ── 1. 리셋 & 기본 ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── 2. Semantic 레이아웃 ── */
+/* wrapper */
+.resume-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* header */
+header.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 헤더 포인트 라인 */
+header.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+/* nav */
+nav.section-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+nav.section-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: var(--transition);
+}
+
+nav.section-nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* section */
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  box-shadow: var(--shadow);
+}
+
+/* footer */
+footer {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── 3. 타이포그래피 ── */
+h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+hr {
+  display: none; /* section 구분은 카드로 대체 */
+}
+
+/* ── 4. 프로필 이미지 ── */
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 6px var(--accent-dim);
+}
+
+.profile-info .tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* ── 5. 기본 정보 리스트 ── */
+ul.info-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+ul.info-list li {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+ul.info-list li::before {
+  content: '▸ ';
+  color: var(--accent);
+}
+
+/* ── 6. 이력 테이블 ── */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.history-table thead tr {
+  background: var(--surface-2);
+}
+
+.history-table th {
+  padding: 12px 16px;
+  text-align: left;
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  vertical-align: top;
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.history-table tbody tr:hover td {
+  background: var(--surface-2);
+  color: var(--text);
+  transition: var(--transition);
+}
+
+/* ── 7. 취미 리스트 ── */
+ul.hobby-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ul.hobby-list li {
+  background: var(--surface-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+}
+
+/* ── 8. 메일 폼 ── */
+.mail-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(62,207,207,0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* 버튼 */
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0f1117;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* ── 9. 섹션 헤더 경고 스타일 ── */
+.section-warning {
+  font-size: 0.8rem;
+  color: var(--danger);
+  margin-left: 8px;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ── 10. 반응형 디자인 ── */
+@media (max-width: 640px) {
+  header.profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+    gap: 20px;
+  }
+
+  section {
+    padding: 28px 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  ul.info-list {
+    grid-template-columns: 1fr;
+  }
+
+  .history-table {
+    font-size: 0.8rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 10px 10px;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── 11. 접근성: 키보드 포커스 ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ── 13. GitHub 아이콘 ── */
+.fa-github {
+  font-size: 1.1rem;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
