@@ -3,115 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이력서</title>
+  <title>양준혁 이력서</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="resume_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
- 
-  <!-- 프로필 -->
-  <h1>양준혁</h1>
-  <img src="https://i.namu.wiki/i/IdSWfnFR9hpWnIEfco4l5AyC9hVLcgpsFKSYIlgN20M8l4ZVQ4u0A5z1S8qcwkrOX_6g46RFnPRRc3svnT4hs6F9dyIaEcKATM3AtjpQtVQD6ZiMLFAgKiHnVbtWj3id2Qp_yNjoMidFouMZqh95v8u9F-3JSvZLDNYN7xCxOYc.webp" alt="홍길동 프로필 사진">
-  <p>안녕하세요! 저는 AI/ML을 공부하는 양준혁입니다.</p>
- 
-  <hr>
- 
-  <!-- 기본 정보 -->
-  <h2>기본 정보</h2>
-  <ul>
-    <li>성별: 남성</li>
-    <li>생년월일: 1996년 8월 1일</li>
-    <li>이메일: bio960801@gmail.com</li>
-    <li>GitHub Respository: <a href="https://github.com/Autobot1236/OZ-AI-BootCamp" target="_blank">github.com/Autobot1236/OZ-AI-BootCamp</a></li>
-  </ul>
- 
-  <hr>
- 
- 
-  <!-- 자기소개 -->
-  <h2>자기소개</h2>
-  <p>
-    현재 OZ Ai 부트캠프에서 Ai를 이용한 헬스케어 서비스를 공부하고 있습니다.
-    야구는 못합니다.
-  </p>
-  <p>
-    Ai의 발전에 놀라워하고 있으며, 앞으로 인간은 무엇을 해야 할까 고민하고 있습니다.
-  </p>
- 
-  <hr>
- 
-  <!-- 이력 테이블 -->
-  <h2>이력</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>기간</th>
-        <th>소속</th>
-        <th>내용</th>
-        <th>비고</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2015.03 ~ 2022.02</td>
-        <td>성균관대학교</td>
-        <td>글로벌바이오메디컬공학과 졸업</td>
-        <td>학사</td>
-      </tr>
-      <tr>
-        <td>2022.10 ~ 2026.03</td>
-        <td>자택</td>
-        <td>쉬었음 청년</td>
-        <td>자원을 축냄</td>
-      </tr>
-      <tr>
-        <td>2026.04 ~ 현재</td>
-        <td>OZ AI 부트캠프</td>
-        <td>AI 헬스케어 과정 수료 중</td>
-        <td>교육</td>
-      </tr>
-    </tbody>
-  </table>
- 
-  <hr>
- 
-  <!-- 프로젝트 -->
-  <h2>좋아하는 것 & 취미</h2>
-  <ul>
-    <li>
-      <h3>좋아하는 음식</h3>
-      <p>튀김류, 특히 치킨을 좋아합니다. 곁들이는 피클류는 꼭 있어야 됩니다. 신발은 튀겨도 맛 없습니다.</p>
-    </li>
-    <li>
-      <h3>취미</h3>
-      <p>최근에는 모바일 게임을 많이 하고 있습니다. 따라서 휴대폰 사양에 민감합니다.</p>
-      <p>애니메이션 좋아합니다. 나루토, 진격의 거인, 닥터 스톤 재미있게 봤습니다. 볼 게 너무 많아서 시간이 부족합니다.</p>
-    </li>
-    <li>
-        <h3>동물</h3>
-        <p>동물, 특히 새를 좋아합니다. 살아 움직이는 닭, 죽어서 고기가 된 닭 모두 OK.</p>
-        <p>대한민국에는 동물원이 너무 적어서 아쉽습니다. 키우는 건 자신 없고, 우리나라는 개인 사육이 금지된 동물도 너무 많아서 재미 없습니다. 옆나라 일본 좀 본받았으면 좋겠네요. </p>
-    </li>
-  </ul>
- 
-  <hr>
- 
-  <!-- 메일 발송 폼 -->
-  <h2>Do Not Contact Me</h2>
-  <form>
-   
-      <label>이메일</label><br>
-      <input type="email" name="email" placeholder="이메일을 입력하세요">
-    </p>
-    <p>
-      <label>제목</label><br>
-      <input type="text" name="subject" placeholder="제목을 입력하세요">
-    </p>
-    <p>
-      <label>내용</label><br>
-      <input type="text" name="message" placeholder="내용을 입력하세요">
-    </p>
-    <button type="button" onclick="window.close()">메일 보내기</button>
-    <button type="reset">초기화</button>
-  </form>
- 
+
+  <div class="resume-wrapper">
+
+    <!-- ── header: 프로필 ── -->
+    <header class="profile-header">
+      <img
+        class="profile-img"
+        src="https://i.namu.wiki/i/IdSWfnFR9hpWnIEfco4l5AyC9hVLcgpsFKSYIlgN20M8l4ZVQ4u0A5z1S8qcwkrOX_6g46RFnPRRc3svnT4hs6F9dyIaEcKATM3AtjpQtVQD6ZiMLFAgKiHnVbtWj3id2Qp_yNjoMidFouMZqh95v8u9F-3JSvZLDNYN7xCxOYc.webp"
+        alt="양준혁 프로필 사진"
+      >
+      <div class="profile-info">
+        <h1>양준혁</h1>
+        <p class="tagline">AI 헬스케어를 공부하는 바이오메디컬 엔지니어</p>
+        <p class="tagline">
+          <a href="https://github.com/Autobot1236/OZ-AI-BootCamp" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+            
+          </a>
+        </p>
+      </div>
+    </header>
+
+    <!-- ── nav: 섹션 바로가기 ── -->
+    <nav class="section-nav" aria-label="섹션 이동">
+      <a href="#info">기본 정보</a>
+      <a href="#about">자기소개</a>
+      <a href="#history">이력</a>
+      <a href="#hobby">취미</a>
+      <a href="#contact">연락하기</a>
+    </nav>
+
+    <!-- ── main ── -->
+    <main>
+
+      <!-- 기본 정보 -->
+      <section id="info" aria-labelledby="info-title">
+        <h2 id="info-title">기본 정보</h2>
+        <ul class="info-list">
+          <li>성별: 남성</li>
+          <li>생년월일: 1996년 8월 1일</li>
+          <li>이메일: bio960801@gmail.com</li>
+    
+        </ul>
+      </section>
+
+      <!-- 자기소개 -->
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">자기소개</h2>
+        <p>
+          현재 OZ AI 부트캠프에서 AI를 이용한 헬스케어 서비스를 공부하고 있습니다.
+          야구는 못합니다.
+        </p>
+        <p>
+          AI의 발전에 놀라워하고 있으며, 앞으로 인간은 무엇을 해야 할까 고민하고 있습니다.
+        </p>
+      </section>
+
+      <!-- 이력 테이블 -->
+      <section id="history" aria-labelledby="history-title">
+        <h2 id="history-title">이력</h2>
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>기간</th>
+              <th>소속</th>
+              <th>내용</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2015.03 ~ 2022.02</td>
+              <td>성균관대학교</td>
+              <td>글로벌바이오메디컬공학과 졸업</td>
+              <td>학사</td>
+            </tr>
+            <tr>
+              <td>2022.10 ~ 2026.03</td>
+              <td>자택</td>
+              <td>쉬었음 청년</td>
+              <td>자원을 축냄</td>
+            </tr>
+            <tr>
+              <td>2026.04 ~ 현재</td>
+              <td>OZ AI 부트캠프</td>
+              <td>AI 헬스케어 과정 수료 중</td>
+              <td>교육</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 취미 -->
+      <section id="hobby" aria-labelledby="hobby-title">
+        <h2 id="hobby-title">좋아하는 것 &amp; 취미</h2>
+        <ul class="hobby-list">
+          <li>
+            <h3>🍗 좋아하는 음식</h3>
+            <p>튀김류, 특히 치킨을 좋아합니다. 곁들이는 피클류는 꼭 있어야 됩니다. 신발은 튀겨도 맛 없습니다.</p>
+          </li>
+          <li>
+            <h3>🎮 취미</h3>
+            <p>최근에는 모바일 게임을 많이 하고 있습니다. 따라서 휴대폰 사양에 민감합니다.</p>
+            <p>애니메이션 좋아합니다. 나루토, 진격의 거인, 닥터 스톤 재미있게 봤습니다. 볼 게 너무 많아서 시간이 부족합니다.</p>
+          </li>
+          <li>
+            <h3>🐦 동물</h3>
+            <p>동물, 특히 새를 좋아합니다. 살아 움직이는 닭, 죽어서 고기가 된 닭 모두 OK.</p>
+            <p>대한민국에는 동물원이 너무 적어서 아쉽습니다. 키우는 건 자신 없고, 우리나라는 개인 사육이 금지된 동물도 너무 많아서 재미 없습니다.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 메일 폼 -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">
+          Do Not Contact Me
+          <span class="section-warning">⚠ 진심</span>
+        </h2>
+        <form class="mail-form">
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요">
+          </div>
+          <div class="form-group">
+            <label for="subject">제목</label>
+            <input type="text" id="subject" name="subject" placeholder="제목을 입력하세요">
+          </div>
+          <div class="form-group">
+            <label for="message">내용</label>
+            <textarea id="message" name="message" placeholder="내용을 입력하세요"></textarea>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn-primary" onclick="window.close()">메일 보내기</button>
+            <button type="reset" class="btn-secondary">초기화</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- ── footer ── -->
+    <footer>
+      <p>© 2026 양준혁 · OZ AI BootCamp</p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
